@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "2ac77896-df0f-4255-a8e5-9146555d4afa",
+		"name": "spring-boot-swift-mt103-to-json-structure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7848965"
+	},
+	"item": [
+		{
+			"name": "Convert MT103 to JSON",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "mt103Message",
+						"value": "{1:F01BICFOOYYAXXX8667486276}{2:O1035933240555HSXPBEP9Y66039196353732100555N}{3:{103:CAD}{108:1510300035526-06}{121:55ba3b2e-2b6d-4546-ad74-2b623231ae98}}{4::20:TESTVISAMT103:23B:CRED:32A:051014CAD1814,28:50K:FOO CAPITAL MARKETS LP 99 WALL ST STE 9999 NEW YORK, NY 10005-3122:52A:TCCLGB22:59:/AU351234567800123456789 FIRM LTD:70:Invoice78665:71A:OUR-}{5:{MAC:3D718929}{CHK:BBB3EF242A7E}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mt103Message\": \"{1:F01BICFOOYYAXXX8667486276}{2:O1031610051014FOOTUS3NBXXX63382244920510142210N}{3:{108:FDF0510141142100}}{4:\\n:20:FDF0510141142100\\n:23B:CRED\\n:32A:051014USD1814,28\\n:50K:FOO CAPITAL MARKETS LP\\n99 WALL ST STE 9999\\nNEW YORK, NY 10005-3122\\n:52D:NORTH FOO BANK\\n999 BROAD FOO RD\\nMELVILLE, NY 9999\\n:59:/00123456789012345678\\nMERCADOS Y GESTION  SA\\nFOOSTREET 65\\nMADRID SPAIN 28010701.18\\n:70:FINDERS FEES-JULY,2007-  10.00, AUG\\nUST,2007-  0.00   SEPTEMBER,2007   \\n 1,999.99\\nBNY CUST RRN - O/B NORTH FORK B\\n:71A:SHA\\n:72:/ACC/ 00940060752415000231\\n-}{5:{MAC:3D718929}{CHK:BBB3EF242A7E}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/mt103/convert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"mt103",
+						"convert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Convert MT103 to JSON",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "mt103Message",
+								"value": "{1:F01BICFOOYYAXXX8667486276}{2:O1035933240555HSXPBEP9Y66039196353732100555N}{3:{103:CAD}{108:1510300035526-06}{121:55ba3b2e-2b6d-4546-ad74-2b623231ae98}}{4:\\n:20:FDF0510141142100\\n:23B:CRED\\n:32A:051014USD1814,28\\n:50K:FOO CAPITAL MARKETS LP\\n99 WALL ST STE 9999\\nNEW YORK, NY 10005-3122\\n:52D:NORTH FOO BANK\\n999 BROAD FOO RD\\nMELVILLE, NY 9999\\n:59:/00123456789012345678\\nMERCADOS Y GESTION  SA\\nFOOSTREET 65\\nMADRID SPAIN 28010701.18\\n:70:FINDERS FEES-JULY,2007-  10.00, AUG\\nUST,2007-  0.00   SEPTEMBER,2007   \\n 1,999.99\\nBNY CUST RRN - O/B NORTH FORK B\\n:71A:SHA\\n:72:/ACC/ 00940060752415000231\\n-}{5:{MAC:3D718929}{CHK:BBB3EF242A7E}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mt103Message\": \"{1:F01BICFOOYYAXXX8667486276}{2:O1031610051014FOOTUS3NBXXX63382244920510142210N}{3:{108:FDF0510141142100}}{4:\\n:20:FDF0510141142100\\n:23B:CRED\\n:32A:051014USD1814,28\\n:50K:FOO CAPITAL MARKETS LP\\n99 WALL ST STE 9999\\nNEW YORK, NY 10005-3122\\n:52D:NORTH FOO BANK\\n999 BROAD FOO RD\\nMELVILLE, NY 9999\\n:59:/00123456789012345678\\nMERCADOS Y GESTION  SA\\nFOOSTREET 65\\nMADRID SPAIN 28010701.18\\n:70:FINDERS FEES-JULY,2007-  10.00, AUG\\nUST,2007-  0.00   SEPTEMBER,2007   \\n 1,999.99\\nBNY CUST RRN - O/B NORTH FORK B\\n:71A:SHA\\n:72:/ACC/ 00940060752415000231\\n-}{5:{MAC:3D718929}{CHK:BBB3EF242A7E}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/mt103/convert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"mt103",
+								"convert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "647"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 11 Nov 2024 15:30:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\"header\":{\"block1\":{\"applicationId\":\"1:F01\",\"senderBIC\":\"BICFOOYYAXXX\",\"sessionNumber\":\"8667486276\",\"sequenceNumber\":null},\"block2\":{\"outputType\":\"2:O103\",\"timeOfInput\":\"5933240555\",\"dateOfMessage\":\"HSXP\",\"receiverBIC\":\"BE\",\"messagePriority\":\"P9Y\",\"deliveryNotification\":\"6603919635\",\"dateTimeIndicator\":\"6603919635\",\"priorityIndicator\":\"3732100555N\"},\"block3\":{\"transactionReference\":\"3:\",\"block31\":{\"code1\":\"103:\",\"expression1\":\"CAD\"},\"block32\":{\"code2\":\"108:\",\"expression2\":\"1510300035526-06\"},\"block33\":{\"code3\":\"121:\",\"expression3\":\"55ba3b2e-2b6d-4546-ad74-2b623231ae98\"}}},\"text\":null,\"trailer\":{\"mac\":\"3D718929\",\"checksum\":\"BBB3EF242A7E\"}}"
+				}
+			]
+		}
+	]
+}
